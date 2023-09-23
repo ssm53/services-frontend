@@ -23,7 +23,7 @@ const navs = [
 </script>
 <nav>
     <div class="container">
-    <h1>Name of the webpage</h1>
+    <h1>X Hack</h1>
     <ul>
         {#each navs as {title, href,}}
         <li>
@@ -42,7 +42,7 @@ const navs = [
     }
     .container{
         display: flex;
-        align-items: center;
+        align-items: flex;
     }
     ul {
     display:  flex;
