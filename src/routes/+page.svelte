@@ -1,7 +1,6 @@
 <script>
 import Navbar from './component/Navbar.svelte';
 import Hero from './component/Hero.svelte';
-import user from "../user";
 
 
 
@@ -11,6 +10,8 @@ import user from "../user";
     <Navbar />
 
     <Hero />
+
+   <div>this is the main page for seller</div> 
   </main>
 
   <style>

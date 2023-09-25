@@ -8,19 +8,19 @@
 <style>
 .hero {
     padding: 10px 0;
-    background-color : green
+    background-color : rgb(141, 233, 141)
     
 }
 h2 {
     font-size: 24px;
-    color: white;
+    color: rgb(2, 2, 2);
     margin-top:0;
     padding:10px 0; 
 }
 p{
     margin-top: 5%;
     border: 2px solid powderblue;
-    color: white green red
+    color: rgb(2, 2, 2)
 }
 
 </style>
