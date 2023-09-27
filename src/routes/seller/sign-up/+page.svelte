@@ -24,7 +24,7 @@
 			experience: parseInt(evt.target['experience'].value),
 			pitch: evt.target['pitch'].value
 		};
-		//dsiadjsaijdas
+
 		const resp = await fetch(PUBLIC_BACKEND_BASE_URL + '/sellers', {
 			method: 'POST',
 			mode: 'cors',
@@ -33,7 +33,7 @@
 			},
 			body: JSON.stringify(sellerData)
 		});
-		console.log(sellerData)
+		
 		if (resp.status == 200) {
 			goto("/seller/login")
 		} else {
@@ -57,7 +57,7 @@
 			<label class="text-center pb-2 text-lg md:label" for="username">
 				<span class="label-text">Username</span>
 			</label>
-			<input type="text" name="username" placeholder="Vamos" class="input input-bordered w-full" />
+			<input type="text" name="username" placeholder="MPUUPMELE" class="input input-bordered w-full" />
 			{#if 'name' in errorForm}
 				<label class="text-center pb-2 text-lg md:label" for="username">
 					<span class="label-text-alt text-red-500">{errorForm['name']}</span>
@@ -72,7 +72,7 @@
 			<input
 				type="email"
 				name="email"
-				placeholder="adios@example.com"
+				placeholder="messithegoat@example.com"
 				class="input input-bordered w-full"
 				required
 			/>
@@ -144,7 +144,7 @@
 			<input
 				type="text"
 				name="language"
-				placeholder=""
+				placeholder="JavaScript"
 				class="input input-bordered w-full"
 				required
 			/>
@@ -170,7 +170,7 @@
 			<input
 				type="text"
 				name="pitch"
-				placeholder=""
+				placeholder="i'm the best in the world"
 				class="input input-bordered w-full"
 				required
 			/>
