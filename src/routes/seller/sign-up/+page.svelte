@@ -24,7 +24,7 @@
 			experience: parseInt(evt.target['experience'].value),
 			pitch: evt.target['pitch'].value
 		};
-
+		//dsiadjsaijdas
 		const resp = await fetch(PUBLIC_BACKEND_BASE_URL + '/sellers', {
 			method: 'POST',
 			mode: 'cors',
