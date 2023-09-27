@@ -53,7 +53,7 @@
 			<label class="text-center pb-2 text-lg md:label" for="username">
 				<span class="label-text">Username</span>
 			</label>
-			<input type="text" name="username" placeholder="Vamos" class="input input-bordered w-full" />
+			<input type="text" name="username" placeholder="MPUUPMELE" class="input input-bordered w-full" />
 			{#if 'name' in errorForm}
 				<label class="text-center pb-2 text-lg md:label" for="username">
 					<span class="label-text-alt text-red-500">{errorForm['name']}</span>
@@ -68,7 +68,7 @@
 			<input
 				type="email"
 				name="email"
-				placeholder="adios@example.com"
+				placeholder="messithegoat@example.com"
 				class="input input-bordered w-full"
 				required
 			/>
