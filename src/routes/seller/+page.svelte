@@ -1,10 +1,10 @@
 <script>
-    import HeaderSeller from '../utils/HeaderSeller.svelte';
+    import HeaderSeller from '../../utils/HeaderSeller.svelte';
     import { goto } from '$app/navigation';
 
 
     function clickMyDetails(){
-    goto ("/seller/my-details")
+    goto ("/seller/login/edit-details")
     };
     
     function clickMyJobs(){
