@@ -2,6 +2,8 @@ import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
 // store added for log in
 import { sellerLoggedIn } from '../stores/store';
 import { userLoggedIn } from '../stores/store';
+import { sellerLoggedIn } from '../stores/store.js';
+
 
 // export function getSellerId() {
 //   const auth = localStorage.getItem("auth")
@@ -128,4 +130,18 @@ userLoggedIn.set(true)
     success: false,
     res: res
   }
+}
+const sellerEmptyAuth = {
+    sellerToken: '',
+    seller: ''
+};
+// pleaase note that we need to set three things to our local strage... at the moment, it is two
+export function sellerLogOut() {
+    localStorage.setItem('auth', JSON.stringify(sellerEmptyAuth));
+    sellerLoggedIn.update((value) => {
+        return false;
+    });
+    goto('/');
+
+    return true;
 }
