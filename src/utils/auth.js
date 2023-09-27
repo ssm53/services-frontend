@@ -5,14 +5,6 @@ import { userLoggedIn } from '../stores/store';
 import { sellerLoggedIn } from '../stores/store.js';
 
 
-// export function getSellerId() {
-//   const auth = localStorage.getItem("auth")
-//   if (auth) {
-//     return JSON.parse(auth)["sellerId"]
-//   }
-//   return null
-// }
-
 // export function getTokenFromLocalStorage() {
 //   const auth = localStorage.getItem("auth")
 //   if (auth) {
@@ -144,4 +136,12 @@ export function sellerLogOut() {
     goto('/');
 
     return true;
+}
+
+export default function getSellerId() {
+  const auth = localStorage.getItem('auth');
+  if (auth) {
+      return JSON.parse(auth)['seller'];
+  }
+  return null;
 }
