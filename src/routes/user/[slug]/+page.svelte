@@ -1,57 +1,39 @@
-<!-- this page is /user/sellerId... he slug is basically he sllerid.
-because we have the slug as seller id, we have the sller id and we can get the details of each seller using the sller id
-
-do a a get requst to backend to get and display seller details.. seller details checek w kok seng
-    get rquest from frontend to backend
-backend do a api endpoint to handle this get request -->
-
-
 <script>
-    import SvelteMarkdown from 'svelte-markdown';
-    import humanize from 'humanize-plus';
-    import { getSellerId } from '../../../utils/auth.js';
+    import { goto } from '$app/navigation';
     export let data;
 </script>
 
-{#if getSellerId() == data.job.user}
-    <div>
-
-        <button class="btn">
-            <a href = '/jobs/{data.job.id}/edit'>Edit Details</a> 
-           
-        </button>      
-    </div>
-    {/if }
-
-<div class="mt-10">
-    <div class="flex">
-        <div class="flex-1">
-            <h1 class="text-3xl font-extrabold">{data.job.title}</h1>
-            <p class="text-xl">{data.job.employer}</p>
+        <div class="bg-white min-h-screen">
+        <div class="flex flex-row w-full text-black">
+            <!-- Change text color to black -->
+    
+            <div class="basis-2/3 prose max-w-none w-full py-8">
+                <h2 class="text-xl font-thin text-black">Name</h2>
+                <p>{data.seller.name}</p>
+                <div class="mt-6" />
+                <h2 class="text-xl font-thin text-black">Email</h2>
+                <p>{data.seller.email}</p>
+                <div class="mt-6" />
+                <h2 class="text-xl font-thin text-black">Rate</h2>
+                <p>{data.seller.rate}</p>
+                <div class="mt-6" />
+                <h2 class="text-xl font-thin text-black">Language</h2>
+                <p>{data.seller.language}</p>
+                <div class="mt-6" />
+                <h2 class="text-xl font-thin text-black">Experience</h2>
+                <p>{data.seller.experience}</p>
+                <div class="mt-6" />
+                <h2 class="text-xl font-thin text-black">Pitch</h2>
+                <p>{data.seller.pitch}</p>
+                <button
+                    class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 focus:outline-none mt-6"
+                    on:click={() => {
+                        goto(`/user/booking/${data.seller.id}`);
+                    }}
+                >
+                    Book Now
+                </button>
+            </div>
         </div>
     </div>
-
-    <div class="flex flex-row w-full mt-8">
-        <div class="basis-2/3 prose max-w-none w-full">
-            <h2 class="text-xl font-thin">Description</h2>
-            <SvelteMarkdown source={data.job.description} />
-            <div class="mt-6" />
-            <h2 class="text-xl font-thin">Requirements</h2>
-            <SvelteMarkdown source={data.job.requirements} />
-            <div class="mt-6" />
-            <h2 class="text-xl font-thin">How to Apply?</h2>
-            <p>{data.job.applicationInstructions}</p>
-        </div>
-        <div class="basis-1/3 ml-4">
-            <h2 class="text-xl font-thin">Location</h2>
-            <p>{data.job.location}</p>
-            <div class="mt-6" />
-            <h2 class="text-xl font-thin">Salary Range</h2>
-            <p>
-                USD {humanize.formatNumber(data.job.minAnnualCompensation)} - USD {humanize.formatNumber(
-                    data.job.maxAnnualCompensation
-                )}
-            </p>
-        </div>
-    </div>
-</div>
+    ﻿
