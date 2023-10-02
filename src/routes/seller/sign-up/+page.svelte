@@ -1,5 +1,5 @@
 <script>
-	//import the header
+
 	import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
 	import { goto } from '$app/navigation';
 
@@ -43,7 +43,6 @@
 		}
 	}
 </script>
-
 <h1 class="text-center text-xl mt-1">Sign Up</h1>
 <div class="text-center">
 	<a class="link-hover italic text-xs" href="/login"

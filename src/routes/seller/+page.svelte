@@ -1,5 +1,5 @@
 <script>
-    import HeaderSeller from '../../utils/HeaderSeller.svelte';
+  import HeaderSeller from '../../utils/HeaderSeller.svelte';
     import { goto } from '$app/navigation';
 
 
@@ -16,8 +16,8 @@
     </script>
     
     <main>
-        <HeaderSeller />
-    
+         
+    <HeaderSeller/>
         <div class ="hero">
           <h2> X Hack </h2>
               <p>
