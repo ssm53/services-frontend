@@ -2,6 +2,7 @@
     import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
     import { goto } from '$app/navigation';
     import { authenticateSeller } from "../../../utils/auth.js";
+    import HeaderSeller from '../../../utils/HeaderSeller.svelte';
     let formErrors = {};
   
     function postLogin() {
@@ -25,6 +26,7 @@
 }
   </script>
   
+  <HeaderSeller />
   <h1 class="text-center text-xl">Login</h1>
   <div class="text-center">
       <a class="link-hover italic text-xs" href="/sellers/new">Yet to have an account? Click here to register instead.</a>
