@@ -144,3 +144,11 @@ export default function getSellerId() {
   }
   return null;
 }
+
+export default function getUserId() {
+  const auth = localStorage.getItem('auth');
+  if (auth) {
+      return JSON.parse(auth)['user'];
+  }
+  return null;
+}
