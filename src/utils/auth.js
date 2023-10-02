@@ -1,6 +1,5 @@
 import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
 // store added for log in
-import { sellerLoggedIn } from '../stores/store';
 import { userLoggedIn } from '../stores/store';
 import { sellerLoggedIn } from '../stores/store.js';
 

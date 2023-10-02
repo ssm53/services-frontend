@@ -28,13 +28,13 @@
     <div class="container">
     <h1>X Hack</h1>
     
-        <button on:click={sellerHome}>Home</button>
+        <button class= "bg-[#a6c1ee] text-white px-5 py-2  rounded-full hover:bg-[#87acec] " on:click={sellerHome}>Home</button>
         
         {#if logIO === true}
-        <button on:click={sellerLogOut}>Log out</button>
+      <div class = "self-auto">  <button on:click={sellerLogOut}>Log out</button> </div>
         {:else}
-        <button on:click={clickLoggedIn}>Log in</button>
-        <button on:click = {sellerSignup}>Sign Up</button>
+        <button class="bg-[#a6c1ee] text-white px-5 py-2  rounded-full hover:bg-[#87acec] " on:click={clickLoggedIn}>Log in</button>
+        <button class="bg-[#a6c1ee] text-white px-5 py-2  rounded-full hover:bg-[#87acec] " on:click = {sellerSignup}>Sign Up</button>
     
 {/if}
 </div>
