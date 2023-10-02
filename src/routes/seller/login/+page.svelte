@@ -39,7 +39,7 @@
               </label>
               <input type="text" name="email" placeholder="" class="input input-bordered w-full" />
                         </div>
-  x
+  
                   <div class="form-control w-full">
               <label class="label" for="password">
                   <span class="label-text">Password</span>
