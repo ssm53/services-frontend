@@ -18,35 +18,23 @@
     <main>
          
     <HeaderSeller/>
-        <div class ="hero">
-          <h2> X Hack </h2>
-              <p>
+        <div class ="bg-green-400">
+          <h2 class= "italic text-5xl bg-green-400 mx-auto my-auto flex justify-center"> X Hack </h2>
+              <p class="  flex items-center justify-center">
                   A platform which bring you the best coding teacher
               </p>
       </div>
-        <p>This is the seller home page</p>
-        <button on:click={clickMyDetails}>My Details</button>
-        <button on:click={clickMyJobs}>My Job</button>
+        <p class= "flex items-center justify-center mt-5 font-size">Welcome to the seller home page</p>
+        <button class= "flex items-center justify-center" on:click={clickMyDetails}>My Details</button>
+        <button class="flex items-center justify-center" on:click={clickMyJobs}>My Job</button>
       </main>
     
       <style>
   
-.hero {
-    padding: 10px 0;
-    background-color : rgb(141, 233, 141)
-    
-}
-h2 {
-    font-size: 24px;
-    color: rgb(2, 2, 2);
-    margin-top:0;
-    padding:10px 0; 
-}
-p{
-    margin-top: 5%;
-    border: 2px solid powderblue;
-    color: rgb(2, 2, 2)
-}
+
+
+
+
 
 
        </style>
