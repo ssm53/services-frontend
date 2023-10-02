@@ -1,6 +1,5 @@
 import { PUBLIC_BACKEND_BASE_URL } from '$env/static/public';
 // store added for log in
-import { sellerLoggedIn } from '../stores/store';
 import { userLoggedIn } from '../stores/store';
 import { sellerLoggedIn } from '../stores/store.js';
 
@@ -142,6 +141,14 @@ export default function getSellerId() {
   const auth = localStorage.getItem('auth');
   if (auth) {
       return JSON.parse(auth)['seller'];
+  }
+  return null;
+}
+
+export default function getUserId() {
+  const auth = localStorage.getItem('auth');
+  if (auth) {
+      return JSON.parse(auth)['user'];
   }
   return null;
 }
